@@ -19,6 +19,7 @@
       var myDataRef = new Firebase('https://lzokh26x4k4.firebaseio-demo.com/');
       $('#messageInput').keypress(function (e) {
         if (e.keyCode == 13) {
+        alert('test');
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
           myDataRef.set({name: name, text: text});
