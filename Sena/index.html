@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Firebase URL -->
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
 		<title>Sena Starting Page</title>
 	</head>
 	<body>
@@ -10,6 +13,19 @@
         		<h1><img src="/Sena/images/Mascot.jpg" alt="rascal"></img>Ravenica's Homepage<img src="/Sena/images/Mascot.jpg" alt="rascal"></img></h1>
 			
     		</div><!-- /.blurb -->
+    		  <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://lzokh26x4k4.firebaseio-demo.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          [ADD SET() HERE]
+          $('#messageInput').val('');
+        }
+      });
+    </script>
 		</div><!-- /.container -->
 		<footer>
     	
