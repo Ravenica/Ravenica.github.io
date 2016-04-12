@@ -22,6 +22,7 @@
           var name = $('#nameInput').val();
           var text = $('#messageInput').val();
           [ADD SET() HERE]
+          myDataRef.set('User ' + name + ' says ' + text);
           $('#messageInput').val('');
         }
       });
